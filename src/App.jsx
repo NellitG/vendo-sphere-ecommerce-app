@@ -7,6 +7,7 @@ import Register from './pages/register'
 import ProductPage from './pages/productPage'
 import Contact from './pages/contact'
 import Cart from './pages/cart'
+import Page_Not_Found from './pages/page_not_found'
 
 function App() {
 
@@ -22,8 +23,7 @@ function App() {
                 <Route path="products" element={<ProductPage/> } />
                 <Route path="contact" element={<Contact/>} />
                 <Route path="cart" element={<Cart/>} />
-
-
+                <Route path="*" element={<Page_Not_Found/>} />
             </Routes>
             <Footer/>
         </>
