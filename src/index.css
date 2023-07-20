@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --primary-color:#3d84a8;
+
+  background-color: #ffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent ;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@layer base {
+    html{
+        font-size: 100%;
+        scroll-behavior: smooth;
+    }
+    ::-webkit-scrollbar{
+        width:10px;
+        height: 3px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background: #000000dc;
+        border-radius: 10px;
+    }
+    .clamp{
+        display: -webkit-box !important;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .fade-in{
+        animation: fadeIn ease 1s;
+        -webkit-animation: fadeIn ease 1s;
+        -moz-animation: fadeIn ease 1s;
+        -o-animation: fadeIn ease 1s;
+        -ms-animation: fadeIn ease 1s;
+        transition: opacity 900ms ease-in-out;
+    }
+    @keyframes fadeIn{
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+    .fade-in-left{
+        animation: fadeInLeft ease 1s;
+        -webkit-animation: fadeInLeft ease 1s;
+        -moz-animation: fadeInLeft ease 1s;
+        -o-animation: fadeInLeft ease 1s;
+        -ms-animation: fadeInLeft ease 1s;
+        transition: opacity 900ms ease-in-out;
+    }
+    @keyframes fadeInLeft{
+        0% {opacity:0; transform: translateX(-20px);}
+        100% {opacity:1; transform: translateX(0px);}
+    }
+
+}
+
