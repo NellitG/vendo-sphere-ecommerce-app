@@ -1,47 +1,16 @@
 import Cart_product from "../components/cart_product"
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 
 const Cart = () => {
 
-    const cart_items = [
-        {
-            title: "Iphone 6S",
-            brand: "Apple",
-            img: "https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z",
-            quantity: 1,
-            price: 400.00,
-            get total() {
-                return this.price * this.quantity;
-            }
+    const { cartProducts } = useContext(CartContext)
 
-        },
-        {
-            title: "Snowboard Jacket Winter Coats",
-            brand: "BIYLACLESEN",
-            img: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
-            quantity: 2,
-            price: 56.99,
-            get total() {
-                return this.price * this.quantity;
-            }
+    
 
-        },
-        {
-            title: "SanDisk SSD PLUS 1TB Internal SSD",
-            brand: "SanDisk",
-            img: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
-            quantity: 2,
-            price: 189.00,
-            get total() {
-                return this.price * this.quantity;
-            }
-
-        }
-      
-    ]
-
-    const total = cart_items.reduce((acc, item) => acc + item.total, 0)
-    const items = cart_items.length
+    const total = cartProducts.reduce((acc, item) => acc + item.total, 0)
+    const items = cartProducts.length
     return (
         <div className="container mx-auto mt-28">
             <div className="flex flex-col-reverse p-4 md:p-0 md:flex-row shadow-md my-10">
@@ -66,7 +35,7 @@ const Cart = () => {
                     </div>
                         
                     {
-                        cart_items.map(item => <Cart_product key={item.title} title={item.title} brand={item.brand} img={item.img} quantity={item.quantity} price={item.price} total={item.total} />)
+                        cartProducts.map(Product => <Cart_product key={Product.name} title={Product.description} brand={Product.id} img={Product.base_image} quantity={Product. avg_ratings} />)
                     }
                   
                     <NavLink to='/' className="flex font-semibold text-[var(--primary-color)] text-sm mt-10">
@@ -82,7 +51,7 @@ const Cart = () => {
                 <div id="summary" className="w-full md:w-1/4 px-8 py-10 bg-[#f6f6f6]">
                     <h1 className="font-semibold text-2xl border-b pb-8 text-[var(--primary-color)]">Order Summary</h1>
                     <div className="flex justify-between mt-10 mb-5">
-                        <span className="font-semibold text-sm uppercase">Items 3</span>
+                        <span className="font-semibold text-sm uppercase">Items</span>
                         <span className="font-semibold text-sm">{ total }$</span>
                     </div>
                     <div>
@@ -120,7 +89,7 @@ const Cart = () => {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div>  
         </div>
 
     )

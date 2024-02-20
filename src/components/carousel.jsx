@@ -2,14 +2,14 @@ import { Carousel, Typography, Button } from "@material-tailwind/react";
  
 export default function Site_Carousel() {
 
-    const title = 'Where Shopping Meets the Future!'
-    const subtitle = 'Welcome to VendoSphere, your gateway to a revolutionary shopping experience! Step into a world of boundless possibilities, where the latest technology and curated collections converge to bring you the ultimate retail destination.'
+    const title = 'Committed to Creating Value!'
+    const subtitle = 'Tomorrows Foundation Today: Crafting Quality Concrete With Precision And Passion.'
 
   return (
     <Carousel transition={{ duration: .5 }} className="h-[100dvh]  w-full">
       <div className="relative h-full w-full">
         <img
-          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1999&q=80"
+          src="https://cdn.pixabay.com/photo/2017/04/11/18/30/concrete-pump-2222450_1280.jpg"
           alt="image 1"
           className="h-full w-full object-cover"
         />
@@ -31,10 +31,10 @@ export default function Site_Carousel() {
             </Typography>
             <div className="flex justify-center  gap-2">
               <Button size="lg" color="white">
-                Explore
+                Read more
               </Button>
               <Button size="lg" color="white" variant="text">
-                Gallery
+                
               </Button>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function Site_Carousel() {
       </div>
       <div className="relative h-full w-full">
         <img
-          src="https://images.unsplash.com/photo-1599669454699-248893623440?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="image 2"
           className="h-full w-full object-cover"
         />
@@ -67,7 +67,7 @@ export default function Site_Carousel() {
                 Explore
               </Button>
               <Button size="lg" color="white" variant="text">
-                Gallery
+                Read more
               </Button>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function Site_Carousel() {
       </div>
       <div className="relative h-full w-full">
         <img
-          src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          src="https://media.istockphoto.com/id/1146059870/photo/concrete-paving-slab.jpg?s=612x612&w=0&k=20&c=52n-OyDx6fU5XuXHR-0DcugnsFSHHSeLTdNJyI-LmFA="
           alt="image 3"
           className="h-full w-full object-cover"
         />
@@ -97,10 +97,9 @@ export default function Site_Carousel() {
             </Typography>
             <div className="flex gap-2">
               <Button size="lg" color="white">
-                Explore
+              Read more
               </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
+              <Button size="lg" color="white" variant="text">   
               </Button>
             </div>
           </div>

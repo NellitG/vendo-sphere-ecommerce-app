@@ -1,7 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import logo from '../assets/logo.svg'
+import concretehubb from '../assets/concretehubb.svg'
 export default function Footer() {
 
     const [isShow, setIsShow] = useState(true)
@@ -18,15 +18,15 @@ export default function Footer() {
     const LINKS = [
         {
             title: "Product",
-            items: ["Home", "Features", "Solutions", "Tutorials"],
+            items: ["Home", "Calculator", "Services", ""],
         },
         {
             title: "Company",
-            items: ["Contact", "Careers", "Press", "News"],
+            items: ["Contact",],
         },
         {
             title: "Resource",
-            items: ["Blog", "Newsletter", "Events", "Help center"],
+            items: ["Events", "Help center"],
         },
     ];
     const currentYear = new Date().getFullYear();
@@ -35,9 +35,9 @@ export default function Footer() {
             <div className="mx-auto w-full max-w-full px-8 shadow-lg rounded-lg">
                 <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
                     <div className="flex flex-col gap-4">
-                        <img src={logo} alt="logo-ct" className="w-48" />
+                        <img src={concretehubb} alt="concretehubb-ct" className="w-48" />
                         <p className="w-full md:w-96 font-medium opacity-40">
-                            Welcome to VendoSphere, your gateway to a revolutionary shopping experience! Step into a world of boundless possibilities, where the latest technology and curated collections converge to bring you the ultimate retail destination.
+                        Welcome to Concrete Hub, your premier destination for all things concrete! We are thrilled to have you join our community of concrete enthusiasts and professionals. Our commitment to quality, reliability, and exceptional customer service sets us apart. We understand the importance of your projects and are here to provide you with the best products and expert advice to ensure your success.
                         </p>
                     </div>
                     <div className="grid grid-cols-3 justify-between gap-4">
@@ -70,7 +70,7 @@ export default function Footer() {
                         variant="small"
                         className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
                     >
-                        &copy; {currentYear} <a href="https://material-tailwind.com/">Vendo Sphere</a>. All
+                        &copy; {currentYear} <a href="https://material-tailwind.com/">Concrete Hub</a>. All
                         Rights Reserved.
                     </Typography>
                     <div className="flex gap-4 text-blue-gray-900 sm:justify-center">

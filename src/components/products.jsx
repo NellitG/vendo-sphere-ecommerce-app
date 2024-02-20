@@ -10,18 +10,19 @@ import PropTypes from 'prop-types'
 
 const Products = ({title}) => {
 
-    const [products, setProducts] = useState(null)
+    const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
        
-        fetch('https://fakestoreapi.com/products')
+        fetch('http://localhost:8000/api/products')
             .then(res => {
                 return res.json()
             })
             .then(data => {
                 setLoading(false)
-                setProducts(data)
+                setProducts(data.data)
+                console.log(data.data)
             }).catch(err =>
                 console.log(err),
                 setLoading(false)

@@ -1,6 +1,6 @@
 import React from "react";
-import logo from '../assets/logo.svg'
 import { NavLink, useNavigate } from 'react-router-dom'
+
 import {
     Navbar,
     Collapse,
@@ -29,7 +29,7 @@ function NavList({setOpenNav = ()=>{}}) {
                 className="font-normal"
             >
 
-                <NavLink className='text-black' to='/' onClick={()=>setOpenNav(false)}>
+                <NavLink className='text-black' to='/'  color="red" onClick={()=>setOpenNav(false)}>
                     <ListItem to='/' className="flex items-center gap-2 py-2 pr-4">
                         Home
                     </ListItem>
@@ -46,9 +46,23 @@ function NavList({setOpenNav = ()=>{}}) {
 
                 <NavLink className='text-black' to='/products' onClick={()=>setOpenNav(false)}>
                     <ListItem className="flex items-center gap-2 py-2 pr-4">
-                        Products
+                        Calculator
                     </ListItem>
                 </NavLink>
+            </Typography>
+
+            <Typography
+                variant="small"
+                color="blue-gray"
+                className="font-normal"
+            >
+
+                <NavLink className='text-black' to='/about us' onClick={()=>setOpenNav(false)}>
+                    <ListItem to='/' className="flex items-center gap-2 py-2 pr-4">
+                        About Us
+                    </ListItem>
+                </NavLink>
+
             </Typography>
             <Typography
                 variant="small"
@@ -96,20 +110,20 @@ export default function ComplexNavbar() {
 
     return (
         <Navbar className="fixed top-2 md:top-5 left-1/2 -translate-x-1/2 bg-white z-30  md:mx-auto w-11/12   md:max-w-screen-xl px-4 py-2 fade-in">
-            <div className="flex items-center justify-between text-blue-gray-900">
+            <div className="flex items-center justify-between text-white-900">
                 <div className="w-40">
                     <NavLink to='/'>
-                        <img src={logo} className="w-full h-full object-cover" alt="Logo" />
+                     
                     </NavLink>
                 </div>
                 <div className="hidden lg:block">
                     <NavList />
                 </div>
                 <div className="hidden gap-2 lg:flex">
-                    <Button variant="text" size="sm" color="blue" onClick={() => navigate('/login')}>
+                    <Button variant="gradient" size="sm" color="yellow" onClick={() => navigate('/login')}>
                         Sign In
                     </Button>
-                    <Button variant="gradient" size="sm" onClick={() => navigate('/register')}>
+                    <Button variant="gradient" size="sm" color="yellow" onClick={() => navigate('/register')}>
                         Sign Up
                     </Button>
                 </div>
@@ -129,10 +143,10 @@ export default function ComplexNavbar() {
             <Collapse open={openNav}>
                 <NavList setOpenNav={setOpenNav} />
                 <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-                    <Button variant="outlined" size="sm" color="blue-gray" fullWidth onClick={() => {navigate('/login');setOpenNav(false)}}>
+                    <Button variant="gradient" size="sm" color="yellow" fullWidth onClick={() => {navigate('/login');setOpenNav(false)}}>
                         Sign In
                     </Button>
-                    <Button variant="gradient" size="sm" fullWidth onClick={() => {navigate('/register');setOpenNav(false)}}>
+                    <Button variant="gradient" size="sm" color="yellow" fullWidth onClick={() => {navigate('/register');setOpenNav(false)}}>
                         Sign Up
                     </Button>
                 </div>
