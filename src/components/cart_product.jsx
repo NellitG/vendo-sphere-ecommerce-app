@@ -1,13 +1,13 @@
 
 import PropTypes from 'prop-types'
 
-const Cart_product = ({title,brand,price,total}) => {
+const Cart_product = ({title,brand,price,total,img}) => {
     
     return (
         <div className="flex flex-wrap md:flex-nowrap gap-3 justify-center items-center hover:bg-gray-100 -mx-8 px-6 py-5">
             <div className="flex flex-col gap-3 items-center justify-center  md:flex-row md:items-start md:gap-0  md:justify-normal w-full md:w-2/5">
                 <div className="w-full  flex items-center justify-center md:block md:w-20">
-                    
+                    <img src={img}></img>
                 </div>
                 <div className="flex flex-col items-center md:items-start justify-between ml-4 flex-grow">
                     <span className="font-bold text-sm">{title}</span>

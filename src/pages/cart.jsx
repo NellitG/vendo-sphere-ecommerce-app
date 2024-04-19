@@ -9,7 +9,7 @@ const Cart = () => {
 
     
 
-    const total = cartProducts.reduce((acc, item) => acc + item.total, 0)
+    const total = cartProducts.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     const items = cartProducts.length
     return (
         <div className="container mx-auto mt-28">
@@ -35,7 +35,7 @@ const Cart = () => {
                     </div>
                         
                     {
-                        cartProducts.map(Product => <Cart_product key={Product.name} title={Product.description} brand={Product.id} img={Product.base_image} quantity={Product. avg_ratings} />)
+                        cartProducts.map(Product => <Cart_product key={Product.name} title={Product.description} brand={Product.id} img={Product.img} quantity={Product.avg_ratings} />)
                     }
                   
                     <NavLink to='/' className="flex font-semibold text-[var(--primary-color)] text-sm mt-10">
@@ -59,7 +59,7 @@ const Cart = () => {
                             Shipping
                         </label>
                         <select className="block p-2 text-gray-600 w-full text-sm">
-                            <option>Standard shipping - $10.00</option>
+                            <option>Standard shipping - $20.00</option>
                         </select>
                     </div>
                     <div className="py-10">
